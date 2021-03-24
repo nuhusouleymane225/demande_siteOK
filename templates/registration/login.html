@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>App de suivi frais d'exploitation</title>
+        <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 10]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <!--  Chargement des fichiers static -->
+        {% load static %}
+
+
+        <meta name="author" content="Mosendev" />
+        <!-- Favicon icon -->
+        <link rel="icon" href="{%static "assets/images/favicon.ico" %} type="image/x-icon">
+        <!-- Google font-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <!-- Required Fremwork -->
+        <link rel="stylesheet" type="text/css" href="{% static "assets/css/bootstrap/css/bootstrap.min.css" %}">
+        <!-- waves.css -->
+        <link rel="stylesheet" href="{% static "assets/pages/waves/css/waves.min.css" %}" type="text/css" media="all">
+        <!-- themify-icons line icon -->
+        <link rel="stylesheet" type="text/css" href="{% static "assets/icon/themify-icons/themify-icons.css" %}">
+        <!-- feather icon -->
+        <link rel="stylesheet" type="text/css" href="{% static "assets/icon/feather/css/feather.css" %}">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="{% static "assets/icon/font-awesome/css/font-awesome.min.css" %}">
+        <!-- Style.css -->
+        <link rel="stylesheet" type="text/css" href="{% static "assets/css/style.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "assets/css/jquery.mCustomScrollbar.css" %}">
+    </head>
+
+
+
+    
+    
+     <section class="login-block">
+        <!-- Container-fluid starts -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Authentication card start -->
+
+                       <div class="container">
+                            <div class="card mt-5">
+                                
+                                <div class="card-body">
+                                    <form class="md-float-material form-material" role="form" method="POST">
+                                        <div class="text-center">
+                                            <img src="{% static "assets/images/auth/Logo-small-bottom.png" %}" alt="logo.png">
+                                        </div>
+                                        <div class="auth-box card">
+                                            
+                                            {% csrf_token %}
+                                            {{ form.as_table }}
+                                            <br/>
+                                            <button type="submit" class="btn btn-primary">Login</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of form -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+
+
+    <script type="text/javascript" src="{% static "assets/js/jquery/jquery.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "assets/js/jquery-ui/jquery-ui.min.js" %} "></script>
+    <script type="text/javascript" src="{% static "assets/js/popper.js/popper.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "assets/js/bootstrap/js/bootstrap.min.js" %} "></script>
+    <!-- waves js -->
+    <script src="{% static "assets/pages/waves/js/waves.min.js" %}"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{% static "assets/js/jquery-slimscroll/jquery.slimscroll.js" %}"></script>
+    <script src="{% static "assets/js/pcoded.min.js" %}"></script>
+    <script src="{% static "assets/js/vertical/vertical-layout.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+    <!-- Custom js -->
+    
+
+</html>
